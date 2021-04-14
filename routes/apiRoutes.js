@@ -2,7 +2,7 @@ const router = require("express").Router();
 const Workout = require("../models/workout");
 
 //get route to work with getLastWorkout function
-router.get("api/workouts", (req, res) => {
+router.get("/api/workouts", (req, res) => {
     Workout.find({})
     .then(dbWorkout => {
         res.json(dbWorkout);
