@@ -1,7 +1,7 @@
 //Exporting Workout object
 
-const Workout = require("./Workout");
+const Workout = require("./workout");
 
 module.exports = {
-    Workout: require("./Workout")
+    Workout
 };
