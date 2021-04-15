@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const Workout = require("../models/workout");
+const Workout = require("../models");
 
 //get route to work with getLastWorkout function
 router.get("/api/workouts", (req, res) => {
@@ -18,7 +18,7 @@ router.put("/api/workouts/:id", (req, res) => {
 
     workout.totalDuration();
     console.log(workout);
-    
+
     Workout.findOneAndUpdate(
         {
             _id: (req.params.id)
