@@ -14,6 +14,11 @@ router.get("/api/workouts", (req, res) => {
 
 // put route to work with addExercise function
 router.put("/api/workouts/:id", (req, res) => {
+    const workout = new Workout(req.body);
+
+    workout.totalDuration();
+    console.log(workout);
+    
     Workout.findOneAndUpdate(
         {
             _id: (req.params.id)
@@ -21,12 +26,13 @@ router.put("/api/workouts/:id", (req, res) => {
         {
             $push: {
             exercises: req.body
-            }   
+            }  
         },
         (error, data) => {
             if (error) {
                 res.send(error);
             } else {
+                console.log("data:::: ", JSON.stringify(data, null,2))
                 res.send(data);
             }
         }
