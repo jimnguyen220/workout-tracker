@@ -1,8 +1,6 @@
 # workout-tracker
 
  
-    
-
   * [Installation](#installation)
   * [Heroku](#Heroku)
   
@@ -11,10 +9,24 @@
   
   ## Description
   
-  A full-stack application to track your workouts
-  
-  
-  ------------------------------------
+  Create and deploy full-stack workout tracker application. This assignment will require you to create Mongo database with a Mongoose schema and handle routes with Express.
+
+  ![Demo](./assets/FitnessTracker.gif)
+
+  ### Technologies used for this project 
+  * NoSQL
+  * MongoDB
+  * Object-document mapping
+  * Mongoose.js
+  * CRUD
+
+
+ ### Additional resources
+
+  [Mongoose Virtuals](https://mongoosejs.com/docs/tutorials/virtuals.html)
+
+
+------------------------------------
   
   ## Installation
   
@@ -23,11 +35,13 @@
       npm install
   
   
-  ------------------------------------
+------------------------------------
   
   ## Heroku
   
-    Click the link below to use the app
+  This application is deployed to Heroku.  To use the app, click the link below.
+
+  https://jpn-workout-tracker.herokuapp.com/
 
     
       

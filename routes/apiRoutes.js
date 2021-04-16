@@ -3,6 +3,7 @@ const Workout = require("../models/Workout");
 
 //get route to work with getLastWorkout function
 router.get("/api/workouts", (req, res) => {
+    console.log(JSON.stringify(Workout));
     Workout.find({})
     .then(dbWorkout => {
         res.json(dbWorkout);
@@ -14,10 +15,6 @@ router.get("/api/workouts", (req, res) => {
 
 // put route to work with addExercise function
 router.put("/api/workouts/:id", (req, res) => {
-    const workout = new Workout(req.body);
-
-    workout.totalDuration();
-    console.log(workout);
 
     Workout.findOneAndUpdate(
         {
